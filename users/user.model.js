@@ -7,6 +7,8 @@ const schema = new Schema({
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     email: { type: String, required: true },
+    payer_id:{type: String, required: true},
+    order_id:{type: String, required: true},
     phone:{ type: String },
     createdDate: { type: Date, default: Date.now }
 });

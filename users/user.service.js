@@ -38,6 +38,10 @@ async function create(userParam) {
         throw 'Username "' + userParam.username + '" is already taken';
     }
 
+    if(!userParam.payer_id) {
+        throw 'Impossível registrar sem pagamento autorizado!';
+    }
+
     const user = new User(userParam);
 
     // hash password
